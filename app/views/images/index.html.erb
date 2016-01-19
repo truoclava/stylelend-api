@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Images</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Width</th>
+      <th>Height</th>
+      <th>Max width</th>
+      <th>Max height</th>
+      <th>Scaled width</th>
+      <th>Scaled height</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @images.each do |image| %>
+      <tr>
+        <td><%= image.width %></td>
+        <td><%= image.height %></td>
+        <td><%= image.max_width %></td>
+        <td><%= image.max_height %></td>
+        <td><%= image.scaled_width %></td>
+        <td><%= image.scaled_height %></td>
+        <td><%= link_to 'Show', image %></td>
+        <td><%= link_to 'Edit', edit_image_path(image) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Image', new_image_path %>

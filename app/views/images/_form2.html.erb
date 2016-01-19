@@ -1,0 +1,6 @@
+<br><br><br><h1>New Images</h1>
+<%= form_tag '/images' do -%>
+  <%= text_field_tag "image[dimensions]", "dimensions" %>
+  <br><%= text_field_tag "image[max_dimensions]", "max_dimensions" %>
+  <br><%= submit_tag "submit" %>
+<% end -%>
